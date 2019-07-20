@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/mediumaquamarine">
+        <TextView
+            android:id="@+id/title_name"
+            android:gravity="center"
+            android:text="当前城市：温州"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/title_back"
+            android:src="@drawable/base_action_bar_back_normal"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/title_back"
+            android:background="@color/palegoldenrod"
+            android:gravity = "center" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_linear"
+        android:layout_width="386dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title_bar"
+        android:background="@drawable/button2"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/magnifying_glass" />
+
+        <com.qst.myweather.ClearEditText
+            android:id="@+id/cetSearchCity"
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/search_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="所选城市："
+            android:textSize="15sp"
+            android:textColor="@color/lightsteelblue"/>
+        <TextView
+            android:id="@+id/tvSelectCityName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="城市代码："
+            android:textSize="15sp"
+            android:textColor="@color/lightsteelblue"/>
+        <TextView
+            android:id="@+id/tvSelectCityCode"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <ListView
+            android:id="@+id/city_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ListView>
+    </LinearLayout>
+</RelativeLayout>
